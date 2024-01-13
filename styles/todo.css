@@ -1,0 +1,108 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Orbitron", sans-serif;
+  scrollbar-color: var(--second-clr) transparent;
+  scrollbar-track-color: transparent;
+  scrollbar-face-color: var(--second-clr);
+  scrollbar-highlight-color: var(--second-clr);
+  scrollbar-shadow-color: var(--second-clr);
+  scrollbar-darkshadow-color: var(--second-clr);
+}
+
+:root {
+  --prim-clr: rgb(222, 183, 132);
+  --sec-clr: #de9c87;
+  --text-clr: rgb(16, 4, 76);
+  --text-clr-2: rgb(57, 59, 93);
+  --orange-clr: rgb(222, 128, 13);
+  --green-clr: rgb(125, 204, 64);
+  --second-clr: rgb(64, 125, 204);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--second-clr);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  overflow: hidden;
+  overflow-y: auto;
+  background-color: black;
+  color: white;
+}
+.todo-wrap {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+.todo-box,
+.todo-box-two {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0.5rem 0;
+  padding: 0 1rem;
+  gap: 0.5rem;
+}
+
+.name-input,
+.due-date-input {
+  font-size: 15px;
+  padding: 6px;
+}
+
+.add-todo-button {
+  background-color: green;
+  color: white;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0.5em 0;
+  transition: all 0.5s;
+  box-shadow: 2px 2px 0 0 rgb(227, 52, 33), 3px 3px 0 0 green;
+}
+.add-todo-button:hover {
+  box-shadow: 4px 4px 0 0 yellow, 6px 6px 0 0 green;
+  transform: translate(-2px, -2px);
+}
+.delete-todo-button {
+  background-color: darkred;
+  color: white;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0.5em 0;
+  transition: all 0.5s;
+  box-shadow: 2px 2px 0 0 rgb(133, 67, 14), 3px 3px 0 0 darkred;
+}
+.delete-todo-button:hover {
+  box-shadow: 4px 4px 0 0 yellow, 6px 6px 0 0 darkred;
+  transform: translate(-2px, -2px);
+}
+@media (max-width: 650px) {
+  .todo-box,
+  .todo-box-two {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    margin: 0.5rem 0;
+    padding: 0 1rem;
+    gap: 0.5rem;
+  }
+}
