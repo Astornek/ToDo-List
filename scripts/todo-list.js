@@ -1,4 +1,4 @@
-// Sprawdź, czy istnieją dane w local storage, jeśli nie, użyj pustej tablicy
+// Czy istnieją dane w local storage, jeśli nie, użyj pustej tablicy
 const todoList = JSON.parse(localStorage.getItem("todoList")) || [];
 
 renderTodoList();
